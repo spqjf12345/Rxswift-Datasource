@@ -7,8 +7,6 @@
 
 import Foundation
 
-///https://zoo-animal-api.herokuapp.com/
-//// animals / rand
 struct Animal: Codable {
     var name: String
     var latin_name: String
