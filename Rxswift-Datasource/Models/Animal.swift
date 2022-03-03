@@ -23,3 +23,7 @@ struct Animal: Codable {
     var image_link: String
     var id: Int
 }
+
+extension Animal {
+    static let EMPTY = Animal(name: "", latin_name: "", animal_type: "", active_time: "", length_min: "", length_max: "", weight_min: "", weight_max: "", lifespan: "", habitat: "", diet: "", geo_range: "", image_link: "", id: 0)
+}

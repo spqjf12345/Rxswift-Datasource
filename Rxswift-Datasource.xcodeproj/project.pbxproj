@@ -15,6 +15,7 @@
 		8E43013227CF8035008EA2A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E43013027CF8035008EA2A4 /* LaunchScreen.storyboard */; };
 		8E7F54FE27D056BE00886B0B /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F54FD27D056BE00886B0B /* Animal.swift */; };
 		8E7F550127D0599B00886B0B /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F550027D0599B00886B0B /* AnimalService.swift */; };
+		8E7F550327D062BB00886B0B /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F550227D062BB00886B0B /* TableViewModel.swift */; };
 		B82824D394AC10DB24C611DA /* Pods_Rxswift_Datasource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1008AB2E8094D1B76110F871 /* Pods_Rxswift_Datasource.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		8E43013327CF8035008EA2A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E7F54FD27D056BE00886B0B /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		8E7F550027D0599B00886B0B /* AnimalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
+		8E7F550227D062BB00886B0B /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		D6FD79ECBE83CA80C5C58DEF /* Pods-Rxswift-Datasource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rxswift-Datasource.debug.xcconfig"; path = "Target Support Files/Pods-Rxswift-Datasource/Pods-Rxswift-Datasource.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7F54FF27D0598800886B0B /* Service */,
-				8E7F54FC27D0569400886B0B /* ViewControllers */,
+				8E7F54FC27D0569400886B0B /* Controllers */,
 				8E7F54FB27D0568E00886B0B /* ViewModels */,
 				8E7F54FA27D0568300886B0B /* Models */,
 				8E43012527CF802D008EA2A4 /* AppDelegate.swift */,
@@ -101,16 +103,17 @@
 		8E7F54FB27D0568E00886B0B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8E7F550227D062BB00886B0B /* TableViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		8E7F54FC27D0569400886B0B /* ViewControllers */ = {
+		8E7F54FC27D0569400886B0B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8E43012927CF802D008EA2A4 /* TableViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		8E7F54FF27D0598800886B0B /* Service */ = {
@@ -247,6 +250,7 @@
 				8E7F54FE27D056BE00886B0B /* Animal.swift in Sources */,
 				8E43012A27CF802D008EA2A4 /* TableViewController.swift in Sources */,
 				8E7F550127D0599B00886B0B /* AnimalService.swift in Sources */,
+				8E7F550327D062BB00886B0B /* TableViewModel.swift in Sources */,
 				8E43012627CF802D008EA2A4 /* AppDelegate.swift in Sources */,
 				8E43012827CF802D008EA2A4 /* SceneDelegate.swift in Sources */,
 			);
