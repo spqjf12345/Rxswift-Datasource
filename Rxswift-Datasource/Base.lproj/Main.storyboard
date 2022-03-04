@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JwY-AT-fY5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KEc-MF-Klp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -83,12 +83,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pju-Nu-xBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="82"/>
+            <point key="canvasLocation" x="730" y="82"/>
         </scene>
-        <!--View Controller-->
+        <!--Rx Table View Controller-->
         <scene sceneID="ZTQ-bl-f24">
             <objects>
-                <viewController id="KEc-MF-Klp" sceneMemberID="viewController">
+                <viewController id="KEc-MF-Klp" customClass="RxTableViewController" customModule="Rxswift_Datasource" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LEN-fm-9g8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,15 +107,18 @@
                             <constraint firstItem="zgN-KT-uC9" firstAttribute="bottom" secondItem="hVd-0I-KH8" secondAttribute="bottom" id="m4T-kL-ipL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="hVd-0I-KH8" id="pAJ-Gl-zhg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wim-Q4-Bza" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1542" y="83"/>
         </scene>
-        <!--View Controller-->
+        <!--Rx Collection View Controller-->
         <scene sceneID="SyO-qc-cmk">
             <objects>
-                <viewController id="sZ4-KJ-tck" sceneMemberID="viewController">
+                <viewController id="sZ4-KJ-tck" customClass="RxCollectionViewController" customModule="Rxswift_Datasource" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WMo-mL-NI2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,6 +153,9 @@
                             <constraint firstItem="NsZ-LM-gs1" firstAttribute="bottom" secondItem="Ss8-xX-uZM" secondAttribute="bottom" id="uW3-Wj-Y7x"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ss8-xX-uZM" id="YMs-Vx-cw7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6g-Qz-1SS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

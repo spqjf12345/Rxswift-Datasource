@@ -34,6 +34,11 @@ struct SectionOfAnimal {
     var items: [Item]
 }
 
+extension SectionOfAnimal {
+    static let EMPTY = SectionOfAnimal(header: "", items: [Animal.EMPTY])
+}
+
+
 extension SectionOfAnimal: SectionModelType {
     typealias Item = Animal
     init(original: SectionOfAnimal, items: [Item]){
