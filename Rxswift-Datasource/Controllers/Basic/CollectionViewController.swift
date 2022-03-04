@@ -25,6 +25,9 @@ class CollectionViewController: UIViewController {
     
     private func setUpCollectionview(){
         collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        // add this line you can provide the cell size from delegate method
+        collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
         
         //delegate didselecteRowAt
         collectionView.rx.modelSelected(Animal.self)
@@ -45,6 +48,14 @@ class CollectionViewController: UIViewController {
     }
 
    
+}
+
+extension CollectionViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width
+        let cellWidth = (width - 30) / 3
+        return CGSize(width: cellWidth, height: cellWidth/0.6)
+    }
 }
 
 
