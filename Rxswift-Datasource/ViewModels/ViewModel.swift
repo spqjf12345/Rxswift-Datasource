@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class TableViewModel {
+class ViewModel {
     var animals = BehaviorSubject<[Animal]>(value: [])
     var selectedAnimals: Animal
     var disposeBag = DisposeBag()

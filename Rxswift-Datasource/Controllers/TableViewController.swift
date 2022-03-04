@@ -15,7 +15,7 @@ import SDWebImage
 class TableViewController: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
-    var viewModel = TableViewModel(selected: Animal.EMPTY)
+    var viewModel = ViewModel(selected: Animal.EMPTY)
     var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
