@@ -72,7 +72,7 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     func configure(animal: Animal){
-        animalImageView.sd_setImage(with: URL(string: animal.image_link)!)
+        animalImageView.sd_setImage(with: URL(string: animal.image_link))
         animalName.text = animal.name
     }
 
