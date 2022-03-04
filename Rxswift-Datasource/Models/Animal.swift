@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxDataSources
 
 struct Animal: Codable {
     var name: String
@@ -26,4 +27,17 @@ struct Animal: Codable {
 
 extension Animal {
     static let EMPTY = Animal(name: "", latin_name: "", animal_type: "", active_time: "", length_min: "", length_max: "", weight_min: "", weight_max: "", lifespan: "", habitat: "", diet: "", geo_range: "", image_link: "", id: 0)
+}
+
+struct SectionOfAnimal {
+    var header: String
+    var items: [Item]
+}
+
+extension SectionOfAnimal: SectionModelType {
+    typealias Item = Animal
+    init(original: SectionOfAnimal, items: [Item]){
+        self = original
+        self.items = items
+    }
 }
