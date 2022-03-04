@@ -39,15 +39,30 @@ class CollectionViewController: UIViewController {
         //cellForRowAt
         viewModel.animals
             .filter{ !$0.isEmpty }
-            .bind(to: collectionView.rx.items(cellIdentifier: CollectionViewCell.identifier, cellType: CollectionViewCell.self)) { index, item, cell in
-                cell.configure(animal: item)
+            .bind(to: collectionView.rx.items(cellIdentifier: CollectionViewCell.identifier, cellType: CollectionViewCell.self)) { row, element, cell in
+                cell.configure(animal: element)
             }.disposed(by: disposeBag)
     }
 
    
 }
 
+
+
 class CollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var animalImageView: UIImageView!
+    @IBOutlet weak var animalName: UILabel!
+    
     static var identifier = "CollectionViewCell"
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    func configure(animal: Animal){
+        animalImageView.sd_setImage(with: URL(string: animal.image_link)!)
+        animalName.text = animal.name
+    }
+
 }
